@@ -8,5 +8,6 @@ server.use(bodyParser.json());
 
 require('./dbUtil')(config);
 require('./routes/get')(server);
+require('./routes/post')(server);
 
-server.listen(port, () => console.log(`listening on port ${port}`));
+server.listen(port, () => console.log(`listening on port  ${port}`));

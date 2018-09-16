@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
+const MailSchema = require('./Models/Mail');
 
 module.exports = config => {
   mongoose.Promise = global.Promise;
   mongoose.connect(config.mongoURI);
-  console.log(mongoose.connection);
+
+  mongoose.model('Mail', MailSchema);
 }

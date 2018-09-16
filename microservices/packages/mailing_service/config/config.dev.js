@@ -1,11 +1,11 @@
-const { PORT, SERVICE_DB_PORT, Q_URI } = process.env;
+const { Q_URI, MJ_API_PUBLIC, MJ_API_SECRET } = process.env;
 
 module.exports = {
-  port: PORT || 3000,
-  serviceDatabase: {
-    port: SERVICE_DB_PORT || 4000
-  },
   q: {
     uri: Q_URI || 'amqp://mzmagxyn:S7PMDKHq4TkS9gFZyNaaDGqtgwozS-pN@chimpanzee.rmq.cloudamqp.com/mzmagxyn'
+  },
+  mailJet: {
+    apiPublic: MJ_API_PUBLIC,
+    apiSecret: MJ_API_SECRET
   }
 };
